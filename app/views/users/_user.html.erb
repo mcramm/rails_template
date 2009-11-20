@@ -1,0 +1,24 @@
+<% form_for @user do |form| %>
+	<%= form.error_messages %>
+
+	<ol class='login-form'>
+		<li>
+			<%= form.label :username, "Username" %>	<%= form.text_field :username, :class => 'register-textfield'%>	
+		</li>
+		<li>
+			<%= form.label :email, "Email" %>	
+			<%= form.text_field :email, :class => 'register-textfield' %>	
+		</li>
+		<li>
+			<%= form.label :password, "Password" %>	
+			<%= form.password_field :password, :class => 'register-textfield' %>	
+		</li>
+		<li>
+			<%= form.label :password_confirmation, "Password confirmation" %>	
+			<%= form.password_field :password_confirmation, :class => 'register-textfield' %>	
+		</li>
+		<li>
+			<%= form.submit "Submit", :id => 'login-submit'  %>	
+		</li>
+	</ol>
+<% end %>
