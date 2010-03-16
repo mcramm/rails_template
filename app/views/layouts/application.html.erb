@@ -7,5 +7,8 @@
 		<%= link_to "Log in", login_path %>
 	<% end %>
 </div>
-
+<%- flash.each do |name, msg| -%>
+	<% content = content_tag :div, msg, :id => "flash_#{name}" %>
+	<%= content_tag :div, content, :id => "flash_content" %>
+<%- end -%>
 <%= yield %>
